@@ -2,7 +2,6 @@ package store
 
 import (
 	"fmt"
-	"strconv"
 	"treeverse-lake/db"
 	"treeverse-lake/index/errors"
 	"treeverse-lake/index/model"
@@ -19,7 +18,7 @@ type RepoReadOnlyOperations interface {
 	ReadObject(addr string) (*model.Object, error)
 	ReadCommit(addr string) (*model.Commit, error)
 	ListTree(addr, from string, results int) ([]*model.Entry, bool, error)
-	ReadTreeEntry(treeAddress, name string, entryType model.Entry_Type) (*model.Entry, error)
+	ReadTreeEntry(treeAddress, name string) (*model.Entry, error)
 
 	// Multipart uploads
 	ReadMultipartUpload(uploadId string) (*model.MultipartUpload, error)
@@ -153,9 +152,9 @@ func (s *KVRepoReadOnlyOperations) ListTree(addr, from string, results int) ([]*
 	return entries, hasMore, nil
 }
 
-func (s *KVRepoReadOnlyOperations) ReadTreeEntry(treeAddress, name string, entryType model.Entry_Type) (*model.Entry, error) {
+func (s *KVRepoReadOnlyOperations) ReadTreeEntry(treeAddress, name string) (*model.Entry, error) {
 	entry := &model.Entry{}
-	return entry, s.query.GetAsProto(entry, SubspaceEntries, db.CompositeStrings(s.repoId, treeAddress, name, strconv.Itoa(int(entryType))))
+	return entry, s.query.GetAsProto(entry, SubspaceEntries, db.CompositeStrings(s.repoId, treeAddress, name))
 }
 
 func (s *KVRepoReadOnlyOperations) ReadMultipartUpload(uploadId string) (*model.MultipartUpload, error) {
@@ -217,7 +216,7 @@ func (s *KVRepoOperations) ClearWorkspace(branch string) error {
 
 func (s *KVRepoOperations) WriteTree(address string, entries []*model.Entry) error {
 	for _, entry := range entries {
-		err := s.query.SetProto(entry, SubspaceEntries, db.CompositeStrings(s.repoId, address, entry.GetName(), strconv.Itoa(int(entry.GetType()))))
+		err := s.query.SetProto(entry, SubspaceEntries, db.CompositeStrings(s.repoId, address, entry.GetName()))
 		if err != nil {
 			return err
 		}

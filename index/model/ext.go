@@ -1,7 +1,6 @@
 package model
 
 import (
-	"fmt"
 	"sort"
 	"strconv"
 )
@@ -31,10 +30,20 @@ func identMapToString(data map[string]string) string {
 }
 
 func (m *Entry) Identity() []byte {
-	return identFromStrings(
-		m.GetName(),
-		m.GetAddress(),
-		fmt.Sprintf("%v", m.Type))
+	return identFromStrings(m.GetName(), m.GetAddress())
+}
+
+func (m *Node) Identity() []byte {
+	entries := m.GetEntries()
+	pointers := m.GetPointers()
+	hashes := make([]string, len(entries)+len(pointers))
+	for i, entry := range entries {
+		hashes[i] = entry.GetAddress()
+	}
+	for i, pointer := range pointers {
+		hashes[i+len(entries)-1] = pointer
+	}
+	return identFromStrings(hashes...)
 }
 
 func (m *Blob) Identity() []byte {

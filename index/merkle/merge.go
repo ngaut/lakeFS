@@ -6,7 +6,6 @@ import (
 )
 
 type entryLike interface {
-	GetType() model.Entry_Type
 	GetName() string
 	GetAddress() string
 }
@@ -14,16 +13,6 @@ type entryLike interface {
 func compareEntries(a, b entryLike) (eqs int) {
 	// names first
 	eqs = strings.Compare(a.GetName(), b.GetName())
-	// directories second
-	if eqs == 0 && a.GetType() != b.GetType() {
-		if a.GetType() < b.GetType() {
-			eqs = -1
-		} else if a.GetType() > b.GetType() {
-			eqs = 1
-		} else {
-			eqs = 0
-		}
-	}
 	return
 }
 

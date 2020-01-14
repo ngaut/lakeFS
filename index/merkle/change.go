@@ -7,15 +7,10 @@ import (
 )
 
 type change struct {
-	Type      model.Entry_Type
 	Name      string
 	Address   string
 	Tombstone bool
 	Object    *model.Object
-}
-
-func (c *change) GetType() model.Entry_Type {
-	return c.Type
 }
 
 func (c *change) GetName() string {
@@ -27,18 +22,11 @@ func (c *change) GetAddress() string {
 }
 
 func (c *change) AsEntry() *model.Entry {
-	if c.Tombstone || c.Type == model.Entry_TREE {
-		return &model.Entry{
-			Name:    c.Name,
-			Address: c.Address,
-			Type:    c.Type,
-		}
-	}
+
 	// for object writes we also include the model's size and timestamp
 	return &model.Entry{
 		Name:      c.Name,
 		Address:   c.Address,
-		Type:      c.Type,
 		Timestamp: c.Object.GetTimestamp(),
 		Size:      c.Object.GetSize(),
 		Checksum:  c.Object.GetBlob().GetChecksum(),
@@ -61,13 +49,11 @@ func newChangeTree(entries []*model.WorkspaceEntry) *changeTree {
 		depth := len(p.SplitParts()) - 1
 		if entry.GetTombstone() != nil {
 			chg = &change{
-				Type:      model.Entry_OBJECT,
 				Name:      name,
 				Tombstone: true,
 			}
 		} else {
 			chg = &change{
-				Type:      model.Entry_OBJECT,
 				Name:      name,
 				Address:   ident.Hash(entry.GetObject()),
 				Object:    entry.GetObject(),
