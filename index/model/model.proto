@@ -6,6 +6,7 @@ message Repo {
     int64 creation_date = 3;
     string default_branch = 4;
     float partial_commit_ratio = 5;
+    // TODO: add a branching factor if using BTree impl.
 }
 
 message Block {
@@ -14,7 +15,7 @@ message Block {
 }
 
 message Blob {
-    repeated Block blocks = 1;
+    repeated Block blocks = 1; // TODO: probably merge this together with Object, no need for this nesting
     string checksum = 2; // used as ETag in S3
 }
 
@@ -43,7 +44,7 @@ message Commit {
 message Branch {
     string name = 1;
     string commit = 2;
-    string commit_root = 3; // de-normalization to save a round trip
+    string commit_root = 3; // de-normalization to save another lookup at the critical path
     string workspace_root = 4;
 }
 
@@ -52,7 +53,7 @@ message Tombstone {}
 message Object {
      Blob blob = 1;
      map<string, string> metadata = 2;
-     int64 timestamp = 3;
+     int64 timestamp = 3; // TODO: probably should only exist within an entry since a copy will refer to the same object but will have a different timestamp
      int64 size = 4;
 }
 
@@ -78,7 +79,7 @@ message WorkspaceEntry {
     string path = 1;
     oneof data {
         Tombstone tombstone = 2;
-        Object object = 3;
+        Object object = 3; // TODO: this should refer to an Entry, not an Object (the entry will point to an underlying Object)
     }
 }
 
