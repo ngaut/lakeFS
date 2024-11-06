@@ -67,7 +67,7 @@
     "cross-env": "^7.0.3",
     "eslint-plugin-compat": "^4.0.2",
     "eslint-plugin-react": "^7.23.2",
-    "happy-dom": "^8.9.0",
+    "happy-dom": "^15.10.2",
     "react-test-renderer": "^18.2.0",
     "rollup-plugin-analyzer": "^4.0.0",
     "sass": "^1.62.1",
