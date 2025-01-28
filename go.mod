@@ -122,7 +122,7 @@ require (
 	github.com/getsentry/sentry-go v0.16.0 // indirect
 	github.com/go-sql-driver/mysql v1.7.0 // indirect
 	github.com/golang-jwt/jwt/v5 v5.0.0 // indirect
-	github.com/golang/glog v1.1.0 // indirect
+	github.com/golang/glog v1.2.4 // indirect
 	github.com/google/flatbuffers v2.0.0+incompatible // indirect
 	github.com/google/s2a-go v0.1.7 // indirect
 	github.com/googleapis/enterprise-certificate-proxy v0.3.1 // indirect
@@ -176,7 +176,7 @@ require (
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
 	github.com/golang/snappy v0.0.4 // indirect
-	github.com/google/go-cmp v0.5.9 // indirect
+	github.com/google/go-cmp v0.6.0 // indirect
 	github.com/google/shlex v0.0.0-20191202100458-e7afc7fbc510 // indirect
 	github.com/googleapis/gax-go/v2 v2.12.0 // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect
