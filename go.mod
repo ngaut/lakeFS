@@ -121,7 +121,7 @@ require (
 	github.com/benbjohnson/clock v1.3.0 // indirect
 	github.com/getsentry/sentry-go v0.16.0 // indirect
 	github.com/go-sql-driver/mysql v1.7.0 // indirect
-	github.com/golang-jwt/jwt/v5 v5.0.0 // indirect
+	github.com/golang-jwt/jwt/v5 v5.2.2 // indirect
 	github.com/golang/glog v1.1.0 // indirect
 	github.com/google/flatbuffers v2.0.0+incompatible // indirect
 	github.com/google/s2a-go v0.1.7 // indirect
