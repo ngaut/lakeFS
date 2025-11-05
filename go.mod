@@ -97,6 +97,14 @@ require (
 	github.com/matoous/go-nanoid v1.5.0
 	github.com/minio/crc64nvme v1.0.1
 	github.com/puzpuzpuz/xsync v1.5.2
+	github.com/treeverse/lakefs/modules/api/factory v0.0.0-20251105080705-11f0017e97eb
+	github.com/treeverse/lakefs/modules/auth/factory v0.0.0-20251105080705-11f0017e97eb
+	github.com/treeverse/lakefs/modules/authentication/factory v0.0.0-20251105080705-11f0017e97eb
+	github.com/treeverse/lakefs/modules/block/factory v0.0.0-20251105080705-11f0017e97eb
+	github.com/treeverse/lakefs/modules/config/factory v0.0.0-20251105080705-11f0017e97eb
+	github.com/treeverse/lakefs/modules/gateway/factory v0.0.0-20251105080705-11f0017e97eb
+	github.com/treeverse/lakefs/modules/license/factory v0.0.0-20251105080705-11f0017e97eb
+	github.com/treeverse/lakefs/webui v0.0.0-20251105080705-11f0017e97eb
 	go.uber.org/ratelimit v0.3.0
 	gocloud.dev v0.34.1-0.20231122211418-53ccd8db26a1
 )
@@ -167,6 +175,7 @@ require (
 	github.com/mitchellh/copystructure v1.0.0 // indirect
 	github.com/mitchellh/hashstructure/v2 v2.0.2 // indirect
 	github.com/mitchellh/reflectwalk v1.0.0 // indirect
+	github.com/moby/sys/user v0.3.0 // indirect
 	github.com/mohae/deepcopy v0.0.0-20170929034955-c48cc78d4826 // indirect
 	github.com/oasdiff/yaml v0.0.0-20250309154309-f31be36b4037 // indirect
 	github.com/oasdiff/yaml3 v0.0.0-20250309153720-d2182401db90 // indirect
@@ -254,7 +263,7 @@ require (
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/opencontainers/go-digest v1.0.0 // indirect
 	github.com/opencontainers/image-spec v1.0.2 // indirect
-	github.com/opencontainers/runc v1.1.14 // indirect
+	github.com/opencontainers/runc v1.2.8 // indirect
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
 	github.com/prometheus/client_model v0.6.1 // indirect
 	github.com/prometheus/common v0.44.0 // indirect
