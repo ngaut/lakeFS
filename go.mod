@@ -1,6 +1,6 @@
 module github.com/treeverse/lakefs
 
-go 1.24.4
+go 1.25.8
 
 require (
 	cloud.google.com/go v0.120.0 // indirect
@@ -13,7 +13,7 @@ require (
 	github.com/dgraph-io/ristretto v0.2.0
 	github.com/fsnotify/fsnotify v1.8.0
 	github.com/getkin/kin-openapi v0.131.0 // no not upgrade until the read body bug intruduced by v0.132.0 is fixed
-	github.com/go-chi/chi/v5 v5.2.2
+	github.com/go-chi/chi/v5 v5.2.4
 	github.com/go-openapi/swag v0.23.0
 	github.com/go-test/deep v1.1.0
 	github.com/gobwas/glob v0.2.3
@@ -97,6 +97,14 @@ require (
 	github.com/matoous/go-nanoid v1.5.0
 	github.com/minio/crc64nvme v1.0.1
 	github.com/puzpuzpuz/xsync v1.5.2
+	github.com/treeverse/lakefs/modules/api/factory v0.0.0-20260402112959-c8c4250e32b6
+	github.com/treeverse/lakefs/modules/auth/factory v0.0.0-20260402112959-c8c4250e32b6
+	github.com/treeverse/lakefs/modules/authentication/factory v0.0.0-20260402112959-c8c4250e32b6
+	github.com/treeverse/lakefs/modules/block/factory v0.0.0-20260402112959-c8c4250e32b6
+	github.com/treeverse/lakefs/modules/config/factory v0.0.0-20260402112959-c8c4250e32b6
+	github.com/treeverse/lakefs/modules/gateway/factory v0.0.0-20260402112959-c8c4250e32b6
+	github.com/treeverse/lakefs/modules/license/factory v0.0.0-20260402112959-c8c4250e32b6
+	github.com/treeverse/lakefs/webui v0.0.0-20260402112959-c8c4250e32b6
 	go.uber.org/ratelimit v0.3.0
 	gocloud.dev v0.34.1-0.20231122211418-53ccd8db26a1
 )
@@ -147,7 +155,7 @@ require (
 	github.com/felixge/httpsnoop v1.0.4 // indirect
 	github.com/fraugster/parquet-go v0.12.0 // indirect
 	github.com/getsentry/sentry-go v0.27.0 // indirect
-	github.com/go-jose/go-jose/v4 v4.0.5 // indirect
+	github.com/go-jose/go-jose/v4 v4.1.4 // indirect
 	github.com/go-logr/logr v1.4.3 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/google/flatbuffers v25.2.10+incompatible // indirect
