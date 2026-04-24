@@ -1,6 +1,6 @@
 module github.com/treeverse/lakefs
 
-go 1.24.4
+go 1.25.8
 
 require (
 	cloud.google.com/go v0.120.0 // indirect
@@ -13,7 +13,7 @@ require (
 	github.com/dgraph-io/ristretto v0.2.0
 	github.com/fsnotify/fsnotify v1.8.0
 	github.com/getkin/kin-openapi v0.131.0 // no not upgrade until the read body bug intruduced by v0.132.0 is fixed
-	github.com/go-chi/chi/v5 v5.2.2
+	github.com/go-chi/chi/v5 v5.2.4
 	github.com/go-openapi/swag v0.23.0
 	github.com/go-test/deep v1.1.0
 	github.com/gobwas/glob v0.2.3
@@ -39,7 +39,7 @@ require (
 	github.com/spf13/cobra v1.9.1
 	github.com/spf13/pflag v1.0.6
 	github.com/spf13/viper v1.20.1
-	github.com/stretchr/testify v1.10.0
+	github.com/stretchr/testify v1.11.1
 	github.com/thanhpk/randstr v1.0.6
 	github.com/treeverse/secret-detector v0.0.0-20250429145544-8c655b974a5f
 	github.com/tsenart/vegeta/v12 v12.11.1
@@ -97,6 +97,14 @@ require (
 	github.com/matoous/go-nanoid v1.5.0
 	github.com/minio/crc64nvme v1.0.1
 	github.com/puzpuzpuz/xsync v1.5.2
+	github.com/treeverse/lakefs/modules/api/factory v0.0.0-20260406210720-e5ce0e35fe4c
+	github.com/treeverse/lakefs/modules/auth/factory v0.0.0-20260406210720-e5ce0e35fe4c
+	github.com/treeverse/lakefs/modules/authentication/factory v0.0.0-20260406210720-e5ce0e35fe4c
+	github.com/treeverse/lakefs/modules/block/factory v0.0.0-20260406210720-e5ce0e35fe4c
+	github.com/treeverse/lakefs/modules/config/factory v0.0.0-20260406210720-e5ce0e35fe4c
+	github.com/treeverse/lakefs/modules/gateway/factory v0.0.0-20260406210720-e5ce0e35fe4c
+	github.com/treeverse/lakefs/modules/license/factory v0.0.0-20260406210720-e5ce0e35fe4c
+	github.com/treeverse/lakefs/webui v0.0.0-20260406210720-e5ce0e35fe4c
 	go.uber.org/ratelimit v0.3.0
 	gocloud.dev v0.34.1-0.20231122211418-53ccd8db26a1
 )
@@ -178,7 +186,7 @@ require (
 	github.com/planetscale/vtprotobuf v0.6.1-0.20240319094008-0393e58bdf10 // indirect
 	github.com/repeale/fp-go v0.11.1 // indirect
 	github.com/robfig/cron/v3 v3.0.1 // indirect
-	github.com/rogpeppe/go-internal v1.13.1 // indirect
+	github.com/rogpeppe/go-internal v1.14.1 // indirect
 	github.com/rotisserie/eris v0.5.4 // indirect
 	github.com/rs/dnscache v0.0.0-20211102005908-e0241e321417 // indirect
 	github.com/sagikazarmark/locafero v0.7.0 // indirect
@@ -189,15 +197,15 @@ require (
 	github.com/ulule/deepcopier v0.0.0-20200430083143-45decc6639b6 // indirect
 	github.com/xhit/go-str2duration/v2 v2.1.0 // indirect
 	github.com/zeebo/errs v1.4.0 // indirect
-	go.opentelemetry.io/auto/sdk v1.1.0 // indirect
+	go.opentelemetry.io/auto/sdk v1.2.1 // indirect
 	go.opentelemetry.io/contrib/detectors/gcp v1.35.0 // indirect
 	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.60.0 // indirect
 	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.60.0 // indirect
-	go.opentelemetry.io/otel v1.36.0 // indirect
-	go.opentelemetry.io/otel/metric v1.36.0 // indirect
+	go.opentelemetry.io/otel v1.41.0 // indirect
+	go.opentelemetry.io/otel/metric v1.41.0 // indirect
 	go.opentelemetry.io/otel/sdk v1.35.0 // indirect
 	go.opentelemetry.io/otel/sdk/metric v1.35.0 // indirect
-	go.opentelemetry.io/otel/trace v1.36.0 // indirect
+	go.opentelemetry.io/otel/trace v1.41.0 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
 	golang.org/x/time v0.11.0 // indirect
 	gonum.org/v1/gonum v0.9.3 // indirect
