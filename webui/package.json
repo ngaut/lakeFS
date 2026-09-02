@@ -62,7 +62,7 @@
     "@babel/eslint-parser": "^7.23.3",
     "@playwright/test": "^1.40.1",
     "@rollup/plugin-replace": "^5.0.5",
-    "@stoplight/prism-cli": "^5.14.2",
+    "@stoplight/prism-cli": "^5.16.0",
     "@stoplight/prism-core": "^5.8.0",
     "@stoplight/prism-http-server": "^5.12.2",
     "@testing-library/react": "^16.3.0",
