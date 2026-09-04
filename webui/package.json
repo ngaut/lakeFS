@@ -93,7 +93,7 @@
     "jsonwebtoken": "^9.0.2",
     "mime-types": "^3.0.1",
     "playwright": "^1.40.1",
-    "sass": "^1.69.5",
+    "sass": "^1.104.0",
     "typescript": "^5.3.3",
     "vite": "^5.4.8",
     "vite-plugin-eslint": "^1.8.1",
